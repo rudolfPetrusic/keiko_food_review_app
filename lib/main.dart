@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_review_app/helper/themes.dart';
 import 'package:food_review_app/pages/home.dart';
 
 void main() {
@@ -14,10 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
+      theme: Themes.lightTheme(),
+      darkTheme: Themes.darkTheme(),
+      themeMode: ThemeMode.system,
       home: const Home(),
     );
   }
